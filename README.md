@@ -1,3 +1,4 @@
 #Test
 Log
-Another log
+Another log  
+creating a new branch is quick
