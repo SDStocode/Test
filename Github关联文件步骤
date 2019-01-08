@@ -1,0 +1,54 @@
+1. 新建一个目录，cd至该目录下;
+2. 执行以下命令：
+echo "# 库名" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/SDStocode/库名.git
+git push -u origin master
+
+这样，本地文件夹就与远程文件夹关联了。
+使用 git push上传本地更新至远程
+使用git pull拉取远程更新至本地
+
+3. 如何将本地库更新为远程库###########当远程版本比本地版本新时要先更新本地
+git fetch origin
+git merge origin/master
+如果是希望本地分支与远程分支合并：
+git pull
+如果未指定分支之间的链接，要设置分支之间的链接：
+$ git branch --set-upstream-to=origin/dev dev
+######要想覆盖远程版本，必须强制推送
+git push -f origin master
+
+4. 推送本地消息上传
+对于单个文件：
+git add readme.md
+多个文件同时上传：
+git add -A
+然后git commit -m "###"
+git push
+
+以上步骤是在初始阶段的操作，远程库与本地库刚刚建立或者新建的远程库要与本地库联接。
+若是希望本地从已经创建好的远程库克隆，进行以下操作：
+git clone git@github.com:username/库名.git
+克隆后只能得到master分支
+把远程dev分支拉到本地：
+git checkout -b dev origin/dev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
